@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sr-RS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dugaplexx</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Dugaplexx Logo" id="logo"/>
+          <h1 class="logo">Dugaplexx</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="">Filmovi</a></li>
+          <li><a href="">Dogadjaji</a></li>
+          <li><a href="">Bioskopi</a></li>
+          <li><a href="">O nama</a></li>
+        </ul>
+        <button class="signup">Sign up</button>
+      </nav>
+    </header>
+    <main>
+      <div class="pages-home">
+        <p class="link-home">Preporučeno</p>
+        <p class="link-home">U bioskopu</p>
+        <p class="link-home">Uskoro</p>
+      </div>
+      <div class="poster">
+        <img src="/img/poster/poster.jpg" alt="Poster" />
+      </div>
+      <div class="filters">
+        <select name="bioskopi-filter" id="bioskopi-filter">
+          <option value="">Svi bioskopi</option>
+          <option value="svi-bioskopi">Kraljevo</option>
+          <option value="svi-bioskopi">Čačak</option>
+        </select>
+        <select name="datum" id="datum">
+          <option value="danas">Danas</option>
+          <option value="sutra">Sutra</option>
+          <option value="prekosutra">Prekosutra</option>
+        </select>
+      </div>
+      <div class="filmovi">
+        <div class="film">
+          <img src="/img/posteriFilmovi/amater.png" alt="Amaterlogo" />
+          <h2 class="title">Amater</h2>
+          <p class="datum-prikaza">
+            Početak prikazivanja: <br />
+            10.04.2025.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
