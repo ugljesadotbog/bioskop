@@ -1,7 +1,24 @@
+:root {
+  --nav-link-color: #d82626;
+  --nav-font: "Saira Condensed", sans-serif;
+  --heading-font: "Inter", 'sans-serif';
+  --nav-text-size: 24px;
+  --nav-font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+color: #fff;
+text-decoration: none;
+}
+
+a:hover {
+  color: var(--nav-link-color) ;
 }
 
 body {
@@ -9,7 +26,11 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-inline: 3rem;
+
+}
+
+main {
+    padding-inline: 12rem;
 }
 
 nav {
@@ -17,7 +38,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 2rem;
+  padding-inline: 12rem;
+  height: 121px;
 }
 
 .logo {
@@ -25,14 +47,65 @@ nav {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
+  font-family: var(--heading-font) ;
+  font-weight: var(--nav-font-weight);
   font-size: 2.5rem;
   color: #fff;
   gap: 0.75rem;
 }
 
+.naslov {
+  font-size: 48px;
+}
+
 #logo {
     width: 75px;
     height: 75px;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  font-family: var(--nav-font);
+  font-weight: var(--nav-font-weight);
+  font-style: normal;
+  line-height: 110%;
+  font-size: var(--nav-text-size);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.signup-btn {
+  background-color: var(--nav-link-color);
+  padding: 6px 36px;
+  color: #fff;
+  font-family: var(--nav-font);
+  font-weight: var(--nav-font-weight);
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+.pages-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  font-family: var(--nav-font);
+  font-size: var(--nav-text-size);
+  font-weight: var(--nav-font-weight);
+  color: #fff;
+  text-transform: uppercase;
+  margin: 4px 0;
 }
