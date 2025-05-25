@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dugaplexx</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,26 +19,30 @@
     <header>
       <nav>
         <div class="logo">
-          <img src="/img/logo.png" alt="Dugaplexx Logo" id="logo"/>
+          <img src="img/logo.png" alt="Dugaplexx Logo" id="logo" />
           <h1 class="naslov">Dugaplexx</h1>
         </div>
-        <ul class="nav-links">
-          <li><a href="">Filmovi</a></li>
-          <li><a href="">Dogadjaji</a></li>
-          <li><a href="">Bioskopi</a></li>
-          <li><a href="">O nama</a></li>
-        </ul>
-        <button class="signup-btn">Sign up</button>
+
+        <div class="nav-group">
+          <ul class="nav-links">
+            <li><a href="">Filmovi</a></li>
+            <li><a href="">Dogadjaji</a></li>
+            <li><a href="">Bioskopi</a></li>
+            <li><a href="">O nama</a></li>
+          </ul>
+          <button class="signup-btn">Sign up</button>
+        </div>
       </nav>
+
     </header>
     <main>
       <div class="pages-home">
         <p class="link-home">Preporučeno</p>
-        <p class="link-home">U bioskopu</p>
+        <p class="link-home active">U bioskopu</p>
         <p class="link-home">Uskoro</p>
       </div>
       <div class="poster">
-        <img src="/img/poster/poster.jpg" alt="Poster" />
+        <img src="img/poster/poster.jpg" alt="Poster" width="100%" />
       </div>
       <div class="filters">
         <select name="bioskopi-filter" id="bioskopi-filter">
@@ -54,14 +58,87 @@
       </div>
       <div class="filmovi">
         <div class="film">
-          <img src="/img/posteriFilmovi/amater.png" alt="Amaterlogo" />
-          <h2 class="title">Amater</h2>
-          <p class="datum-prikaza">
-            Početak prikazivanja: <br />
-            10.04.2025.
-          </p>
+          <img src="img/posteriFilmovi/amater.png" alt="Amaterlogo" />
+          <h2 class="title">AMATER</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>10.04.2025</p>
+        </div>
+          <div class="film">
+          <img src="img/posteriFilmovi/armand.png" alt="Amaterlogo" />
+          <h2 class="title">ARMAND</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>15.05.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/camacubasti.png" alt="Camacubastilogo" />
+          <h2 class="title">ČAMAC U BAŠTI</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>08.05.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/crnatorba.png" alt="Crnatorbalogo" />
+          <h2 class="title">CRNA TORBA</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>13.03.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/gresnici.png" alt="Gresnicilogo" />
+          <h2 class="title">GREŠNICI</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>17.04.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/gromovnici.png" alt="Gromovnicilogo" />
+          <h2 class="title">GROMOVNICI</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>01.05.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/igrastraha.png" alt="Igrastranalogo" />
+          <h2 class="title">IGRA STRANA</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>10.04.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/kraljkraljevi.png" alt="Kraljkraljevilogo" />
+          <h2 class="title">KRALJ NAD KRALJEVIMA</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>17.04.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/minecraft.png" alt="Minecraftlogo" />
+          <h2 class="title">MINECRAFT FILM</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>03.04.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/opakiradnik.png" alt="Opakiradniklogo" />
+          <h2 class="title">OPAKI RADNIK</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>27.03.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/poplava.png" alt="Poplavalogo" />
+          <h2 class="title">POPLAVA</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>03.04.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/poslednjaekskurzija.png" alt="Poslednjaekskurzijalogo" />
+          <h2 class="title">POSLEDNJA EKSKURZIKA</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>15.05.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/princezazmaj.png" alt="Princezazmajlogo" />
+          <h2 class="title">PRINCEZA KOJU JE OTEO ZMAJ</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>27.02.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/racunovodja.png" alt="Racunovodjalogo" />
+          <h2 class="title">RAČUNOVODJA 2</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>24.04.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/snezana.png" alt="Snezanalogo" />
+          <h2 class="title">SNEŽANA</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>20.03.2025</p>
+        </div>
+        <div class="film">
+          <img src="img/posteriFilmovi/tajanstvenasuma.png" alt="Tajanstvenasumalogo" />
+          <h2 class="title">TAJANSTVENA ŠUMA</h2>
+          <p class="datum-prikaza">Početak prikazivanja:<br>24.04.2025</p>
         </div>
       </div>
+
     </main>
   </body>
 </html>
