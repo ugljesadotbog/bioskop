@@ -1,7 +1,7 @@
 :root {
   --nav-link-color: #d82626;
   --nav-font: "Saira Condensed", sans-serif;
-  --heading-font: "Inter", 'sans-serif';
+  --heading-font: "Inter", "sans-serif";
   --nav-text-size: 24px;
   --nav-font-weight: 700;
 }
@@ -13,12 +13,12 @@
 }
 
 a {
-color: #fff;
-text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:hover {
-  color: var(--nav-link-color) ;
+  color: var(--nav-link-color);
 }
 
 body {
@@ -26,11 +26,14 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
 
+.active {
+  color: var(--nav-link-color);
 }
 
 main {
-    padding-inline: 12rem;
+  padding-inline: 12rem;
 }
 
 nav {
@@ -47,7 +50,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: var(--heading-font) ;
+  font-family: var(--heading-font);
   font-weight: var(--nav-font-weight);
   font-size: 2.5rem;
   color: #fff;
@@ -59,8 +62,8 @@ nav {
 }
 
 #logo {
-    width: 75px;
-    height: 75px;
+  width: 75px;
+  height: 75px;
 }
 
 ul {
@@ -142,15 +145,15 @@ ul {
 
 .filters {
   display: flex;
-  gap: 10px; 
+  gap: 10px;
   padding: 10px;
   justify-content: flex-end;
 }
 
 .filters select {
-  background-color: #1A1A1A;
-  color: #D1D1D1;
-  border: 1px solid #444; 
+  background-color: #1a1a1a;
+  color: #d1d1d1;
+  border: 1px solid #444;
   border-radius: 999px;
   padding: 8px 14px;
   appearance: none;
@@ -219,4 +222,169 @@ ul {
   .film {
     width: 100%; /* 1 po redu */
   }
+}
+
+.korak-container {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  background-color: #1a1a1a;
+  font-size: 14px;
+}
+
+.korak {
+  color: #999;
+  font-family: var(--nav-font);
+  font-size: var(--nav-text-size);
+}
+
+.korak span {
+  color: red;
+  margin-left: 5px;
+}
+
+.ulaznice-container {
+  display: flex;
+  background-color: #242424;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ulaznice-slika img {
+  width: 340px;
+  height: 550px;
+  object-fit: cover;
+}
+
+.ulaznice-info {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+}
+
+.ulaznice-naslov {
+  display: flex;
+  flex-direction: column;
+}
+
+.ulaznice-naslov h1,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.ulaznice-naslov-film {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 36px;
+  font-weight: var(--nav-font-weight);
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.ulaznice-bioskop {
+  color: #e53935;
+  font-weight: var(--nav-font-weight);
+  font-family: var(--nav-font);
+  font-size: var(--nav-text-size);
+  margin: 0;
+}
+
+.ulaznice-zanr {
+  font-size: 24px;
+  color: #fff;
+  /* margin-bottom: 15px; */
+  font-family: var(--nav-font);
+  font-weight: 500;
+}
+
+.ulaznice-trajanje {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: var(--nav-font);
+  font-weight: 500;
+}
+
+.ulaznice-karte {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip,
+.vreme-projekcije {
+  font-weight: 600;
+  font-size: var(--nav-text-size);
+  font-family: var(--nav-font);
+  color: #fff;
+}
+
+.karte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  font-family: var(--nav-font);
+  font-weight: medium;
+  font-size: var(--nav-text-size);
+  color: #fff;
+}
+
+.next-step {
+  background-color: #e53935;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 200px;
+  color: white;
+  font-weight: bold;
+  margin-top: 32px;
+  cursor: pointer;
+  /* border-radius: 5px; */
+  align-self: end;
+}
+
+.next-step:hover {
+  background-color: #d32f2f;
+}
+
+#ulaznice {
+  color: var(--nav-link-color);
+}
+
+.plus-minus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(800px - 10px);
+  justify-content: space-between;
+}
+
+.brojac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: #2d2d2d 0.5px solid;
+}
+
+.znakovi-img:hover {
+  cursor: pointer;
+}
+
+#odrasli-container {
+  border-bottom: #2d2d2d 0.5px solid;
+}
+
+.znakovi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brojac-span {
+  color: #fff;
+  margin-left: 2px;
 }
