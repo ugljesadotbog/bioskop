@@ -337,13 +337,14 @@ h3 {
 .next-step {
   background-color: #e53935;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 30px;
+  border-radius: 200px;
   color: white;
   font-weight: bold;
-  margin-top: 15px;
+  margin-top: 32px;
   cursor: pointer;
-  border-radius: 5px;
-  align-self: start;
+  /* border-radius: 5px; */
+  align-self: end;
 }
 
 .next-step:hover {
@@ -358,6 +359,8 @@ h3 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: calc(800px - 10px);
+  justify-content: space-between;
 }
 
 .brojac {
@@ -367,10 +370,21 @@ h3 {
   border-top: #2d2d2d 0.5px solid;
 }
 
-#deca {
-  border-top: #2d2d2d 0.5px solid;
+.znakovi-img:hover {
+  cursor: pointer;
 }
 
-.znakovi:hover {
-  cursor: pointer;
+#odrasli-container {
+  border-bottom: #2d2d2d 0.5px solid;
+}
+
+.znakovi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brojac-span {
+  color: #fff;
+  margin-left: 2px;
 }
