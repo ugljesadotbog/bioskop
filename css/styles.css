@@ -29,6 +29,10 @@ body {
 
 }
 
+.active {
+  color: var(--nav-link-color);
+}
+
 main {
     padding-inline: 12rem;
 }
@@ -219,4 +223,150 @@ ul {
   .film {
     width: 100%; /* 1 po redu */
   }
+}
+
+.korak-container {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  background-color: #1a1a1a;
+  font-size: 14px;
+}
+
+.korak {
+  color: #999;
+  font-family: var(--nav-font);
+  font-size: var(--nav-text-size);
+}
+
+.korak span {
+  color: red;
+  margin-left: 5px;
+}
+
+.ulaznice-container {
+  display: flex;
+  background-color: #242424;
+  border: 2px solid #005fa3;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #005fa3;
+  max-width: 850px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ulaznice-slika img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.ulaznice-info {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+}
+
+.ulaznice-naslov-film {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: var(--nav-font-weight);
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.ulaznice-bioskop {
+  color: #e53935;
+  font-weight: var(--nav-font-weight);
+  font-family: var(--nav-font);
+  font-size: var(--nav-text-size);
+}
+
+.zanr {
+  font-size: 24px;
+  color: #bbb;
+  margin-bottom: 15px;
+  font-family: var(--nav-font);
+  font-weight: var(--nav-font-weight);
+}
+
+.ulaznice-karte {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tip,
+.vreme-projekcije {
+  font-weight: bold;
+}
+
+.karte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.karte::before {
+  content: "-";
+  background-color: #444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.karte::after {
+  content: "+";
+  background-color: #e53935;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.karte#odrasli::before {
+  content: "−";
+}
+.karte#odrasli::after {
+  content: "+";
+}
+.karte#deca::before {
+  content: "−";
+}
+.karte#deca::after {
+  content: "+";
+}
+
+button {
+  background-color: #e53935;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  align-self: start;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+#ulaznice {
+  color: var(--nav-link-color);
 }
