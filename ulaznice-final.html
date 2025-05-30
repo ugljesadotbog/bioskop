@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sr-RS">
+<head>
+   <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dugaplexx</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="img/logo.png" alt="Dugaplexx Logo" id="logo"
+          /></a>
+          <a href="index.html"><h1 class="naslov">Dugaplexx</h1></a>
+        </div>
+      </nav>
+    </header>
+     <main>
+      <div class="korak-container">
+        <p class="korak">Ulaznice <span>></span></p>
+        <p class="korak active">Sedišta <span>></span></p>
+        <p class="korak" id="naplata" >Naplata</p>
+      </div>
+      <div class="ulaznice-container">
+        <div class="ticket">
+            <div class="left">
+            <div class="title">DUGAPLEXX</div>
+            <div class="subtitle">BIOSKOPSKA ULAZNICA</div>
+            <hr />
+            <div class="subtitle">DUGAPLEXX KRALJEVO</div>
+            <div class="movie">NEMOGUĆA MISIJA: KONAČNA ODMAZDA</div>
+            <div class="info-line">
+                <span class="info-time">Danas, 18:15</span>
+                <span class="info-time">2h 49m</span>
+                <span class="info-time">2D</span>
+            </div>
+           <div class="info-line boxed">
+            <span class="span-border">RED: 7</span>
+            <span class="span-border">SEDIŠTA 8-9</span>
+            <span class="span-border" style="border-right: none;" id="desni-span">2 x 670,00</span>
+            </div>
+            <div class="info-line">
+                <span>DATUM: 24.5.2025.</span>
+                <span>UKUPNO: 1340,00 RSD</span>
+      </div>
+    </div>
+    <div class="right">
+            <div class="qr">
+                <p>PRIKAŽI OVAJ<br>KOD NA ULAZU</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=0021458" alt="QR Code" />
+            </div>
+            <div class="barcode">
+                <img src="https://barcode.tec-it.com/barcode.ashx?data=0021458&code=Code128&translate-esc=false" alt="Barkod" />
+                <div class="order-number">BROJ NARUDŽBINE<br><strong>#0021458</strong></div>
+            </div>
+        </div>
+        </div>
+      </div>
+     </main>
+</body>
+</html>
