@@ -388,3 +388,84 @@ h3 {
   color: #fff;
   margin-left: 2px;
 }
+
+.sedista-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #242424;
+  border-radius: 8px;
+}
+
+.sedista-levo {
+  width: 65%;
+}
+
+.platno {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sala-mapa {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.red {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.sedi {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.standard {
+  background-color: white;
+}
+
+.zauzeto {
+  background-color: #444;
+}
+
+.izabrano {
+  background-color: red;
+}
+
+.legenda {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.sedista-desno {
+  width: 30%;
+  background-color: #1a1a1a;
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+}
+
+.film-info img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.film-naslov {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 20px;
+  color: white;
+}

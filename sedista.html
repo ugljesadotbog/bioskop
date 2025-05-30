@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="sr-RS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dugaplexx – Izbor sedišta</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/sedista.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Saira+Condensed:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .btn-naplata {
+        background-color: #e53935;
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: bold;
+        border-radius: 50px;
+        margin-top: 16px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .btn-naplata:hover {
+        background-color: #d32f2f;
+      }
+
+      .sala-container {
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+
+      #sala {
+        display: grid;
+        grid-template-columns: repeat(12, 40px);
+        gap: 8px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .seat {
+        width: 40px;
+        height: 40px;
+        background-color: #444;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .seat.zauzeto {
+        background-color: #777;
+        cursor: not-allowed;
+      }
+
+      .seat.izabrano {
+        background-color: #e53935;
+      }
+
+      .legenda {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 20px;
+        color: white;
+      }
+
+      .legenda span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .legenda .seat {
+        width: 20px;
+        height: 20px;
+      }
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        gap: 12px; /* razmak između pravougaonika */
+        padding: 20px;
+        flex-wrap: wrap; /* za bolji responsive */
+        }
+
+        .sala-container,
+        .film-info {
+        background-color: #111; /* crna pozadina */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+        }
+
+        .sala-container {
+        flex: 1 1 600px;
+        max-width: 700px;
+        }
+
+        .film-info {
+        color: white;
+        max-width: 300px;
+        flex: 0 0 300px;
+        }
+
+        .film-info img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        }
+
+        .info-text p {
+        margin: 4px 0;
+        }
+
+        .info-text {
+        display: flex;
+        flex-direction: column;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="Dugaplexx Logo" id="logo" />
+          </a>
+          <a href="index.html"><h1 class="naslov">Dugaplexx</h1></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+    <div class="korak-container">
+        <p class="korak" id="ulaznice">Ulaznice <span>></span></p>
+        <p class="korak active" id="sedista">Sedišta <span>></span></p>
+        <p class="korak">Naplata</p>
+    </div>
+
+    <div class="flex-container">
+        <div class="sala-container">
+            <img src="img/Ellipse 2.png" id="platno" alt="platno" width="100%">
+            <h2>Platno</h2>
+            <div id="sala"></div>
+            <div class="legenda">
+            <span><div class="seat"></div> Standard</span>
+            <span><div class="seat zauzeto"></div> Zauzeto</span>
+            <span><div class="seat izabrano"></div> Izabrano</span>
+            </div>
+        </div>
+
+        
+        <div class="film-info">
+            <img src="img/posteriFilmovi/amater.png" alt="amater-slika" />
+            <div class="info-text">
+                <h2 class="film-naslov">Nemoguća misija: Konačna odmazda</h2>
+                <p class="bioskop-naziv">Dugaplexx Kraljevo</p>
+                <p class="trajanje">2h 49m</p>
+                <p class="format">2D</p>
+                <p class="vreme">Danas, 18:15</p>
+                <p class="sedista-broj">Red 7 SEDIŠTA 8-9</p>
+                <p class="cene">2 x 670,00</p>
+                <p class="ukupna-cena">UKUPNA SUMA: 1340,00 RSD</p>
+                <button class="btn-naplata">Kupi</button>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <script>
+      const brojRedova = 9;
+      const brojKolona = 12;
+      const sala = document.getElementById("sala");
+      let sedista = [];
+
+      function generisiSalu() {
+        sala.innerHTML = "";
+        sedista = [];
+
+        for (let i = 0; i < brojRedova; i++) {
+          sedista[i] = [];
+          for (let j = 0; j < brojKolona; j++) {
+            const btn = document.createElement("div");
+            btn.classList.add("seat");
+
+            // 25% šansa da je mesto zauzeto
+            if (Math.random() < 0.25) {
+              btn.classList.add("zauzeto");
+            }
+
+            sala.appendChild(btn);
+            sedista[i][j] = btn;
+
+            btn.addEventListener("click", () => {
+              if (btn.classList.contains("zauzeto")) return;
+
+              document.querySelectorAll(".seat.izabrano").forEach(s =>
+                s.classList.remove("izabrano")
+              );
+
+              // Probaj da selektuješ 2 mesta levo ili desno
+              if (
+                j + 1 < brojKolona &&
+                !sedista[i][j + 1].classList.contains("zauzeto")
+              ) {
+                sedista[i][j].classList.add("izabrano");
+                sedista[i][j + 1].classList.add("izabrano");
+              } else if (
+                j - 1 >= 0 &&
+                !sedista[i][j - 1].classList.contains("zauzeto")
+              ) {
+                sedista[i][j].classList.add("izabrano");
+                sedista[i][j - 1].classList.add("izabrano");
+              }
+            });
+          }
+        }
+      }
+
+      generisiSalu();
+    </script>
+  </body>
+</html>
